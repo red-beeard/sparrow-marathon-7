@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 	}
 }
 
-// MARK: -
+// MARK: - UIScrollViewDelegate
 
 extension ViewController: UIScrollViewDelegate {
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -58,8 +58,6 @@ extension ViewController: UIScrollViewDelegate {
 			imageView.frame.origin = CGPoint(x: 0, y: scrollView.contentOffset.y)
 			imageView.frame.size = CGSize(width: view.frame.width, height: imageViewHeigh)
 			scrollView.verticalScrollIndicatorInsets.top = imageViewHeigh - view.safeAreaInsets.top
-		} else {
-			imageView.frame.size = CGSize(width: view.frame.width, height: Constants.imageHeight)
 		}
 	}
 }
